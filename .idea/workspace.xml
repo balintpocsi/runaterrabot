@@ -15,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -45,31 +46,64 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TestList.getColorFromImage">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="Application.MouseEventDemo">
+    <configuration name="Drawing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exp.Drawing" />
       <module name="comrunaterra" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="experimental.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestList.getColorFromImage" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DrawingBoardWithMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="experimental.DrawingBoardWithMatrix" />
       <module name="comrunaterra" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="getColorFromImage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="experimental.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestList.listTestMethod" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MouseEventDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="experimental.MouseEventDemo" />
+      <module name="comrunaterra" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="experimental.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MouseListenerExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="experimental.MouseListenerExample" />
+      <module name="comrunaterra" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="experimental.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestList.scanForRectangleByCursorPosition" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="comrunaterra" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="listTestMethod" />
+      <option name="METHOD_NAME" value="scanForRectangleByCursorPosition" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -79,9 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestList.getColorFromImage" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="TestNG.TestList.listTestMethod" />
+        <item itemvalue="Application.MouseEventDemo" />
+        <item itemvalue="TestNG.TestList.scanForRectangleByCursorPosition" />
+        <item itemvalue="Application.MouseListenerExample" />
+        <item itemvalue="Application.DrawingBoardWithMatrix" />
+        <item itemvalue="Application.Drawing" />
       </list>
     </recent_temporary>
   </component>

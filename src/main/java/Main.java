@@ -1,6 +1,10 @@
 import java.awt.AWTException;
 import java.awt.Color;
+import java.util.List;
 
+import Cards.Card;
+import Cards.Creature;
+import Cards.Teemo;
 import net.sourceforge.tess4j.TesseractException;
 
 public class Main {
@@ -11,6 +15,8 @@ public class Main {
         final Color VIOLET = new Color(163, 73, 164);
         final Color GREEN = new Color(34, 177, 76);
         final Color BLUE = new Color(0, 162, 232);
+        List<Color> list;
+
 
 
         RobotService robotService = new RobotService();
@@ -19,10 +25,13 @@ public class Main {
         //System.out.println(readValuesFromImageService.readFromImage("C:\\screenshots\\2020-02-17 12 38 57_screenshot.png"));
 
         ScreenshotService screenshotService = new ScreenshotService();
+
+        list=screenshotService.getUniqueSequenceFromPicture(screenshotService.getBufferedImageByStaticCoordinates());
+        screenshotService.drawUniqueSequenceOfColorsToWhiteFlatBoard(list);
         //screenshotService.cachedScreenshots();    //nem mukodik
         //screenshotService.makeScreenshotInfinitely();
 
-        robotService.scanForColorValues();
+        //robotService.scanForColorValues();
 
         //screenshotService.makeScreenshotInfinitely(0, 0, 250,376);
 

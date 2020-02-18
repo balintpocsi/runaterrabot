@@ -1,9 +1,11 @@
 import java.awt.AWTException;
+import java.awt.Color;
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -40,6 +42,54 @@ public class ScreenshotService {
         BufferedImage screenShot = robot.createScreenCapture(rect);
         ImageIO.write(screenShot, "png", new File("C:\\screenshots\\"+formatter.format(now.getTime())+"_screenshot.png"));
         System.out.println(formatter.format(now.getTime())+"_screenshot.png"+" created.");
+    }
+
+    //mocked
+    public BufferedImage getBufferedImageByStaticCoordinates() throws IOException {
+        int x = 0;
+        int y =0;
+        int width = 249;
+        int height =375;
+        Rectangle rect = new Rectangle(x, y, width, height);
+        //return robot.createScreenCapture(rect);
+
+        //mocked
+        File file = new File("teemo.png");
+        BufferedImage image = ImageIO.read(file);
+        //mocked
+
+        return image;
+    }
+
+    public List<Color> getUniqueSequenceFromPicture(BufferedImage image){
+        List<Color> colorList = new ArrayList<>();
+        int heightValueConst = 100;
+
+        Color color = new Color(image.getRGB(3,3));
+        System.out.println(color.getRed()+" "+color.getGreen()+" "+color.getBlue());
+
+        for (int widthStartValue = 50; widthStartValue < 200; widthStartValue++){
+            colorList.add(new Color(image.getRGB(widthStartValue, heightValueConst)));
+        }
+
+        System.out.println("must be 150 element");
+        System.out.println(colorList.size());
+        for(Color c : colorList){
+            System.out.println(c.getRGB());
+        }
+        return colorList;
+    }
+
+    public void drawUniqueSequenceOfColorsToWhiteFlatBoard(List<Color> list) throws IOException {
+        int heightValueConst = 100;
+        File outputfile = new File("white.png");
+        BufferedImage image = ImageIO.read(outputfile);
+        for (int i = 0; i < 150; i++){
+            image.setRGB(i+50,heightValueConst, list.get(i).getRGB());
+        }
+
+
+        ImageIO.write(image, "png", outputfile);
     }
 
     public void makeScreenshotInfinitely(int x, int y, int width, int height) throws Exception {

@@ -29,6 +29,7 @@ public class RobotService {
                 MouseInfo.getPointerInfo().getLocation().y + ")");
              color = robot.getPixelColor(MouseInfo.getPointerInfo().getLocation().x, MouseInfo.getPointerInfo().getLocation().y);
             System.out.println(color.getRed()+", "+color.getGreen()+", "+color.getBlue());
+            System.out.println("RGB: "+color.getRGB());
 
         }
     }

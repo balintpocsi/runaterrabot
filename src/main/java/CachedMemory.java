@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+
+//nem mukodik
 public class CachedMemory {
 
     public void listTestMethod() throws InterruptedException {

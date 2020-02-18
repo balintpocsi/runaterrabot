@@ -1,4 +1,9 @@
+import java.awt.AWTException;
 import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.MouseInfo;
+import java.awt.Robot;
+import java.awt.event.InputEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -65,17 +70,35 @@ public class TestList {
     public void getColorFromImage() throws IOException {
         File file = new File("teemo.png");
         BufferedImage image = ImageIO.read(file);
+
+        Graphics2D graphics = image.createGraphics();
+        graphics.setColor(Color.RED);
+
         int heightValueConst = 100;
 
         Color color = new Color(image.getRGB(3,3));
         System.out.println(color.getRed()+" "+color.getGreen()+" "+color.getBlue());
 
-        for (int widthStartValue = 0; widthStartValue < image.getWidth(); widthStartValue++){
+        for (int widthStartValue = 50; widthStartValue < 200; widthStartValue++){
 
             image.setRGB(widthStartValue,heightValueConst, new Color(255, 255, 255).getRGB());
         }
 
+        //drawing the ed rectangle
+        graphics.drawRect(0, 0, 249, 375);
+        graphics.dispose();
+
         File outputfile = new File("saved.png");
         ImageIO.write(image, "png", outputfile);
+    }
+
+    @Test
+    public void scanForRectangleByCursorPosition() throws AWTException {
+        boolean isPressed = true;
+        Robot robot = new Robot();
+   //     robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+
+
+
     }
 }
