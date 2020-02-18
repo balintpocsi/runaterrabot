@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab07e059-fbf0-43f3-b3f9-2aed2c688357" name="Default Changelist" comment="" />
+    <list default="true" id="ab07e059-fbf0-43f3-b3f9-2aed2c688357" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/runaterrabot.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/comrunaterra.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/BlankArea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/DrawingBoardWithMatrix$PaintSurface$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/DrawingBoardWithMatrix$PaintSurface$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/DrawingBoardWithMatrix$PaintSurface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/DrawingBoardWithMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/Main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/Main$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/Main$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/MouseEventDemo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/MouseEventDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/MouseListenerExample$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/MouseListenerExample$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/MouseListenerExample$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/MouseListenerExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exp/SharpCanvasTest.class" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +43,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XvpZIqf1E8Lp4hzAN29YLuRVBb" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -46,9 +73,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MouseEventDemo">
-    <configuration name="Drawing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exp.Drawing" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="DrawingBoardWithMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="experimental.DrawingBoardWithMatrix" />
       <module name="comrunaterra" />
       <extension name="coverage">
         <pattern>
@@ -60,15 +87,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawingBoardWithMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="experimental.DrawingBoardWithMatrix" />
-      <module name="comrunaterra" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="experimental.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="com.runaterra" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.MouseEventDemo" />
         <item itemvalue="TestNG.TestList.scanForRectangleByCursorPosition" />
         <item itemvalue="Application.MouseListenerExample" />
         <item itemvalue="Application.DrawingBoardWithMatrix" />
-        <item itemvalue="Application.Drawing" />
       </list>
     </recent_temporary>
   </component>
@@ -133,5 +154,16 @@
       <updated>1581936476698</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
