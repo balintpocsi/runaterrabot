@@ -10,4 +10,11 @@ public class Teemo extends Creature{
         super(uniqueColorSequence, name, cost, damage);
     }
 
+    public Teemo createTeemo(){
+        List<Color> list = Arrays.asList(new Color(-123124), new Color(-124151));
+        Teemo teemo = new Teemo(list, "Teemo", 1, 1);
+        defense=1;
+        return teemo;
+    }
+
 }
