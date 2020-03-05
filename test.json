@@ -1,0 +1,16 @@
+[
+  {
+    "message":"Hi",
+    "place":{
+      "name":"World!"
+    },
+    "message2":"Hello",
+    "place2":{
+      "name":"World 2!"
+    },
+    "message3":"Yo",
+    "place3":{
+      "name":"World 3!"
+    }
+  }
+]

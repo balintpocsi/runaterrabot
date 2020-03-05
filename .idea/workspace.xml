@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab07e059-fbf0-43f3-b3f9-2aed2c688357" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/01PZ008.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Cards/Teemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cards/Teemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ScreenshotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScreenshotService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Cards/Teemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cards/Teemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ScreenshotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ScreenshotService.class" afterDir="false" />
-    </list>
+    <list default="true" id="ab07e059-fbf0-43f3-b3f9-2aed2c688357" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,21 +20,20 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
   <component name="ProjectId" id="1XvpZIqf1E8Lp4hzAN29YLuRVBb" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/KeyboardService" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="KeyboardService" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\bot\runaterrabot" />
+      <recent name="C:\comrunaterra\src\main\java\KeyboardService" />
       <recent name="C:\comrunaterra" />
       <recent name="C:\comrunaterra\tessdata" />
     </key>
@@ -60,13 +50,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="DrawingBoardWithMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="experimental.DrawingBoardWithMatrix" />
+  <component name="RunManager" selected="Application.Hello">
+    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="KeyboardService.Hello" />
       <module name="comrunaterra" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="experimental.*" />
+          <option name="PATTERN" value="KeyboardService.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,7 +66,7 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="com.runaterra" />
+      <module name="comrunaterra" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,24 +84,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MouseListenerExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="experimental.MouseListenerExample" />
+    <configuration name="TestList.readFromJsonMethod" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="comrunaterra" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="experimental.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestList" />
+      <option name="METHOD_NAME" value="readFromJsonMethod" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestList.scanForRectangleByCursorPosition" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestList.readFromJsonMethod2" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="comrunaterra" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="scanForRectangleByCursorPosition" />
+      <option name="METHOD_NAME" value="readFromJsonMethod2" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -121,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Hello" />
+        <item itemvalue="TestNG.TestList.readFromJsonMethod2" />
+        <item itemvalue="TestNG.TestList.readFromJsonMethod" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MouseEventDemo" />
-        <item itemvalue="TestNG.TestList.scanForRectangleByCursorPosition" />
-        <item itemvalue="Application.MouseListenerExample" />
-        <item itemvalue="Application.DrawingBoardWithMatrix" />
       </list>
     </recent_temporary>
   </component>
@@ -141,18 +130,5 @@
       <updated>1581936476698</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

@@ -1,24 +1,30 @@
 import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.MouseInfo;
-import java.awt.Robot;
-import java.awt.event.InputEvent;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.stream.Stream;
 
 import javax.imageio.ImageIO;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.testng.annotations.Test;
 
+import netscape.javascript.JSObject;
 
 public class TestList {
 
@@ -92,12 +98,48 @@ public class TestList {
         ImageIO.write(image, "png", outputfile);
     }
 
-    @Test
-    public void scanForRectangleByCursorPosition() throws AWTException {
-        boolean isPressed = true;
-        Robot robot = new Robot();
-   //     robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+//    @Test
+//    public void readFromJsonMethod() throws IOException {
+//        Gson gson = new Gson();
+//        JsonElement json = gson.fromJson(new FileReader("C:\\comrunaterra\\set1-en_us.json"), JsonElement.class);
+//        String result = gson.toJson(json);
+//        System.out.println(result);
+//
+//    }
 
+    private String readLineByLineJava8(String filePath) {
+        StringBuilder contentBuilder = new StringBuilder();
+
+        try (Stream<String> stream = Files.lines( Paths.get(filePath), StandardCharsets.UTF_8))
+        {
+            stream.forEach(s -> contentBuilder.append(s).append("\n"));
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        return contentBuilder.toString();
+    }
+
+    public String readFile(){
+        String filePath = "C:\\comrunaterra\\set1-en_us.json";
+
+        return readLineByLineJava8( filePath );
+    }
+
+    @Test
+    public void readFromJsonMethod2() {
+        JSONArray cardArray = new JSONArray(readFile());
+//        System.out.println(cardArray.getJSONObject(0).toString());
+//        System.out.println(cardArray.getJSONObject(0).get("name").toString());
+//        System.out.println(cardArray.getJSONObject(1).toString());
+//        System.out.println(cardArray.getJSONObject(1).get("name").toString());
+
+        System.out.println("Size: "+cardArray.length()+"\n");
+        for (int i =0;i<cardArray.length();i++){
+            System.out.println(cardArray.getJSONObject(i).get("name").toString());
+        }
 
 
     }

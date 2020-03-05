@@ -1,6 +1,5 @@
 import java.awt.AWTException;
 import java.awt.Color;
-import java.util.Arrays;
 import java.util.List;
 
 import Cards.Card;
@@ -17,7 +16,6 @@ public class Main {
         final Color GREEN = new Color(34, 177, 76);
         final Color BLUE = new Color(0, 162, 232);
         List<Color> list;
-        List<Card> deck = Arrays.asList();
 
 
 
@@ -28,14 +26,12 @@ public class Main {
 
         ScreenshotService screenshotService = new ScreenshotService();
 
-        //screenshotService.makeFullScreenScreenshotInfinitely();
-
-        //list=screenshotService.getUniqueSequenceFromPicture(screenshotService.getBufferedImageByStaticCoordinates());
-        //screenshotService.drawUniqueSequenceOfColorsToWhiteFlatBoard(list);
+        list=screenshotService.getUniqueSequenceFromPicture(screenshotService.getBufferedImageByStaticCoordinates());
+        screenshotService.drawUniqueSequenceOfColorsToWhiteFlatBoard(list);
         //screenshotService.cachedScreenshots();    //nem mukodik
         //screenshotService.makeScreenshotInfinitely();
 
-        robotService.scanForColorValues();
+        //robotService.scanForColorValues();
 
         //screenshotService.makeScreenshotInfinitely(0, 0, 250,376);
 

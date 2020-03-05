@@ -44,13 +44,6 @@ public class ScreenshotService {
         System.out.println(formatter.format(now.getTime())+"_screenshot.png"+" created.");
     }
 
-    public void makeScreenshotVoidFullScreen() throws Exception {
-        Calendar now = Calendar.getInstance();
-        BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
-        ImageIO.write(screenShot, "png", new File("C:\\screenshots\\"+formatter.format(now.getTime())+"_screenshot.png"));
-        System.out.println(formatter.format(now.getTime())+"_screenshot.png"+" created.");
-    }
-
     //mocked
     public BufferedImage getBufferedImageByStaticCoordinates() throws IOException {
         int x = 0;
@@ -104,14 +97,6 @@ public class ScreenshotService {
             Thread.sleep(3000);
 
             makeScreenshotVoid(x,y,width,height);
-        }
-    }
-
-    public void makeFullScreenScreenshotInfinitely() throws Exception {
-        while(true){
-            Thread.sleep(3000);
-
-            makeScreenshotVoidFullScreen();
         }
     }
 
