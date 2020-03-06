@@ -20,6 +20,8 @@ import javax.imageio.ImageIO;
 import org.json.JSONArray;
 import org.testng.annotations.Test;
 import KeyboardService.ReadFromFileService;
+import PageObjects.MainMenuPage;
+import PageObjects.SelectYourDeckPage;
 
 public class TestList {
 
@@ -156,5 +158,22 @@ public class TestList {
 //            Thread.sleep(20);
 //            pressEnter();
 //        }
+    }
+
+    @Test
+    public void testMouseService() throws AWTException, InterruptedException {
+
+        MainMenuPage mainMenuPage = new MainMenuPage();
+        SelectYourDeckPage selectYourDeckPage = new SelectYourDeckPage();
+
+        Thread.sleep(5000);
+
+        mainMenuPage.clickOnPlay();
+        Thread.sleep(1000);
+        selectYourDeckPage.selectFirstDeck();
+        Thread.sleep(1000);
+        selectYourDeckPage.confirmPlay();
+        Thread.sleep(1000);
+
     }
 }

@@ -1,14 +1,10 @@
-import static java.awt.event.MouseEvent.MOUSE_PRESSED;
 
 import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.MouseInfo;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class RobotService {
     private Robot robot;
@@ -86,7 +82,7 @@ public class RobotService {
     }
 
 
-    public void loopOfGetColorValue(int r, int g, int b) throws InterruptedException {
+    public void loopUntilGivenRGBVaueIsFound(int r, int g, int b) throws InterruptedException {
         boolean notFoundTargetColor = true;
         while(notFoundTargetColor){
             Thread.sleep(2000);
@@ -98,7 +94,7 @@ public class RobotService {
 
     }
 
-    public void loopOfGetColorValue(Color color) throws InterruptedException {
+    public void loopUntilGivenRGBVaueIsFound(Color color) throws InterruptedException {
         boolean notFoundTargetColor = true;
         while(notFoundTargetColor){
             Thread.sleep(2000);
@@ -110,7 +106,7 @@ public class RobotService {
 
     }
 
-    public void loopOfGetColorValue(int x, int y, Color color) throws InterruptedException {
+    public void loopUntilGivenRGBVaueIsFound(int x, int y, Color color) throws InterruptedException {
         boolean notFoundTargetColor = true;
         while(notFoundTargetColor){
             Thread.sleep(2000);
