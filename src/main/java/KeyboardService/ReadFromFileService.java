@@ -33,7 +33,7 @@ public class ReadFromFileService {
 
         String fileData = stringBuffer.toString();
         System.out.println(fileData);
-        fileData = fileData.toLowerCase();
+        //fileData = fileData.toLowerCase();
         char[] rawStringArray = fileData.toCharArray();
 
         Thread.sleep(3000);
@@ -41,6 +41,16 @@ public class ReadFromFileService {
             String chToString = Character.toString(ch);
             keyboardService.printChar(chToString);
             Thread.sleep(50);
+        }
+    }
+
+    public void readFromString(String targetString) throws InterruptedException, AWTException {
+        char[] rawStringArray = targetString.toCharArray();
+        System.out.println(targetString);
+        for (char ch : rawStringArray){
+            String chToString = Character.toString(ch);
+            keyboardService.printChar(chToString);
+            Thread.sleep(20);
         }
     }
 }

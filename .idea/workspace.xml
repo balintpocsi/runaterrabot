@@ -50,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Hello">
+  <component name="RunManager" selected="TestNG.TestList.readFromJsonMethod2">
     <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="KeyboardService.Hello" />
       <module name="comrunaterra" />
@@ -67,19 +67,6 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="comrunaterra" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MouseEventDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="experimental.MouseEventDemo" />
-      <module name="comrunaterra" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="experimental.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,13 +95,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestList.writeFromJsonFile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="comrunaterra" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestList" />
+      <option name="METHOD_NAME" value="writeFromJsonFile" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Hello" />
         <item itemvalue="TestNG.TestList.readFromJsonMethod2" />
+        <item itemvalue="TestNG.TestList.writeFromJsonFile" />
+        <item itemvalue="Application.Hello" />
         <item itemvalue="TestNG.TestList.readFromJsonMethod" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.MouseEventDemo" />
       </list>
     </recent_temporary>
   </component>

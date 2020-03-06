@@ -1,10 +1,10 @@
 import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Graphics2D;
-
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -12,19 +12,14 @@ import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.stream.Stream;
-
 import javax.imageio.ImageIO;
-
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.testng.annotations.Test;
-
-import netscape.javascript.JSObject;
+import KeyboardService.ReadFromFileService;
 
 public class TestList {
 
@@ -34,8 +29,6 @@ public class TestList {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh mm ss");
         Queue<String> queue = new LinkedList<>();
         List<String> listOrdered2 = new ArrayList<String>();
-
-
 
         for (int i =0; i < 10;i++){
 
@@ -60,9 +53,6 @@ public class TestList {
                 listOrdered2 = listOrdered;
 
             }
-
-
-
         }
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         System.out.println("for ciklus at the end");
@@ -123,24 +113,48 @@ public class TestList {
     }
 
     public String readFile(){
-        String filePath = "C:\\comrunaterra\\set1-en_us.json";
+        String filePath = "set1-en_us.json";
 
         return readLineByLineJava8( filePath );
     }
 
+    private void pressEnter() throws AWTException {
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+    }
+
     @Test
-    public void readFromJsonMethod2() {
+    public void readFromJsonMethod2() throws InterruptedException {
         JSONArray cardArray = new JSONArray(readFile());
 //        System.out.println(cardArray.getJSONObject(0).toString());
 //        System.out.println(cardArray.getJSONObject(0).get("name").toString());
-//        System.out.println(cardArray.getJSONObject(1).toString());
-//        System.out.println(cardArray.getJSONObject(1).get("name").toString());
-
         System.out.println("Size: "+cardArray.length()+"\n");
+        Thread.sleep(3000);
         for (int i =0;i<cardArray.length();i++){
             System.out.println(cardArray.getJSONObject(i).get("name").toString());
         }
+    }
 
+    @Test
+    public void writeFromJsonFile() throws AWTException, InterruptedException {
+        ReadFromFileService readFromFileService = new ReadFromFileService();
+        JSONArray cardArray = new JSONArray(readFile());
+        System.out.println("Size: "+cardArray.length()+"\n");
+        Thread.sleep(3000);
+        String cardname;
+        for (int i =0;i<cardArray.length();i++){
+            cardname = cardArray.getJSONObject(i).get("name").toString();
+            readFromFileService.readFromString(cardname);
+            pressEnter();
+        }
 
+//        for(Object obj : cardArray){
+//           JSONObject jsonObject = (JSONObject) obj;
+//            System.out.println(jsonObject.get("name").toString());
+//            readFromFileService.readFromString(jsonObject.get("name").toString());
+//            Thread.sleep(20);
+//            pressEnter();
+//        }
     }
 }
