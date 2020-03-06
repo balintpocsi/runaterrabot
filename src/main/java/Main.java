@@ -12,9 +12,10 @@ public class Main {
         List<Color> list;
 
         RobotService robotService = new RobotService();
-//        ReadValuesFromImageService readValuesFromImageService = new ReadValuesFromImageService();
+        ReadValuesFromImageService readValuesFromImageService = new ReadValuesFromImageService();
 //
-//        //System.out.println(readValuesFromImageService.readFromImage("C:\\screenshots\\2020-02-17 12 38 57_screenshot.png"));
+        //ez mukodik
+       System.out.println(readValuesFromImageService.readFromImage("2020-03-06 05 26 47_screenshot.png"));
 //
 //        ScreenshotService screenshotService = new ScreenshotService();
 //
@@ -23,7 +24,7 @@ public class Main {
         //screenshotService.cachedScreenshots();    //nem mukodik
         //screenshotService.makeScreenshotInfinitely();
 
-        robotService.scanForColorValues();
+        //robotService.scanForColorValues();
 
         //screenshotService.makeScreenshotInfinitely(0, 0, 250,376);
 
