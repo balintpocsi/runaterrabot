@@ -21,6 +21,5 @@ public class SelectYourDeckPage {
     public void confirmPlay(){
         mouseService.moveMouse(1639, 1087);
         mouseService.leftClickWithMouseButton();
-        //robotService.loopUntilGivenRGBVaueIsFound(35, 177, 77);
     }
 }

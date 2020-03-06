@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9f33203-9af8-4682-a00c-41980eab50eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/CardCollectionsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/CardPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/MainMenuPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SelectYourDeckPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/StartingHandPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/MouseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/BattlingPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/RobotService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RobotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RobotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SelectYourDeckPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SelectYourDeckPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/StartingHandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/StartingHandPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/MouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/MouseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/comrunaterra.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/SelectYourDeckPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/SelectYourDeckPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/RobotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RobotService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/comrunaterra.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/MouseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/MouseService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/TestList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestList.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,6 +37,11 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="PageObjects" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -56,10 +54,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="TestNG.TestList.screenShotServiceTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="com.runaterra" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestList.checkManaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com.runaterra" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestList" />
+      <option name="METHOD_NAME" value="checkManaTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestList.screenShotServiceTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com.runaterra" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestList" />
+      <option name="METHOD_NAME" value="screenShotServiceTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,7 +112,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestList.screenShotServiceTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="TestNG.TestList.checkManaTest" />
         <item itemvalue="TestNG.TestList.testMouseService" />
         <item itemvalue="TestNG.TestList.writeFromJsonFile" />
       </list>

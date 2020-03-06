@@ -20,8 +20,10 @@ import javax.imageio.ImageIO;
 import org.json.JSONArray;
 import org.testng.annotations.Test;
 import KeyboardService.ReadFromFileService;
+import PageObjects.BattlingPage;
 import PageObjects.MainMenuPage;
 import PageObjects.SelectYourDeckPage;
+import PageObjects.StartingHandPage;
 
 public class TestList {
 
@@ -165,6 +167,8 @@ public class TestList {
 
         MainMenuPage mainMenuPage = new MainMenuPage();
         SelectYourDeckPage selectYourDeckPage = new SelectYourDeckPage();
+        StartingHandPage startingHandPage = new StartingHandPage();
+        BattlingPage battlingPage = new BattlingPage();
 
         Thread.sleep(5000);
 
@@ -174,6 +178,24 @@ public class TestList {
         Thread.sleep(1000);
         selectYourDeckPage.confirmPlay();
         Thread.sleep(1000);
+        startingHandPage.confirmOkayToHand();
+        Thread.sleep(3000);
+    }
 
+    @Test
+    public void checkManaTest() throws AWTException, InterruptedException {
+        System.out.println("started");
+        Thread.sleep(5000);
+        BattlingPage battlingPage = new BattlingPage();
+        System.out.println("actual mana: "+battlingPage.checkMyMana());
+    }
+
+
+    @Test
+    public void screenShotServiceTest() throws Exception {
+        ScreenshotService screenshotService = new ScreenshotService();
+        Thread.sleep(4000);
+        screenshotService.makeScreenshotVoid(1659, 708, 40, 40);
+        System.out.println("done");
     }
 }

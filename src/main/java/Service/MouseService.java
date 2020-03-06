@@ -14,11 +14,13 @@ public class MouseService {
     public void leftClickWithMouseButton(){
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        waitOneSec();
     }
 
     public void rightClickWithMouseButton(){
         robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
+        waitOneSec();
     }
 
     public void moveMouse(int x, int y) {
