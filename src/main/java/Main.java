@@ -14,8 +14,11 @@ public class Main {
         RobotService robotService = new RobotService();
         ReadValuesFromImageService readValuesFromImageService = new ReadValuesFromImageService();
 //
-        //ez mukodik
+        //WORKING - Read value from image = 4
        System.out.println(readValuesFromImageService.readFromImage("2020-03-06 05 26 47_screenshot.png"));
+
+        //System.out.println(readValuesFromImageService.readFromImage("C:\\screenshots\\2020-03-06 05 26 47_screenshot.png"));
+
 //
 //        ScreenshotService screenshotService = new ScreenshotService();
 //

@@ -198,4 +198,11 @@ public class TestList {
         screenshotService.makeScreenshotVoid(1659, 708, 40, 40);
         System.out.println("done");
     }
+
+     @Test
+    public void globalMouseListenerTest(){
+
+        
+
+     }
 }
