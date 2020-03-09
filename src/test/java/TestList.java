@@ -17,9 +17,12 @@ import java.util.List;
 import java.util.Queue;
 import java.util.stream.Stream;
 import javax.imageio.ImageIO;
+
+import org.jnativehook.NativeHookException;
 import org.json.JSONArray;
 import org.testng.annotations.Test;
 import KeyboardService.ReadFromFileService;
+import MouseListener.MainMouseListenerService;
 import PageObjects.BattlingPage;
 import PageObjects.MainMenuPage;
 import PageObjects.SelectYourDeckPage;
@@ -200,9 +203,8 @@ public class TestList {
     }
 
      @Test
-    public void globalMouseListenerTest(){
-
-        
-
+    public void globalMouseListenerTest() throws NativeHookException, InterruptedException {
+         MainMouseListenerService mainMouseListenerService = new MainMouseListenerService();
+         mainMouseListenerService.trackingMouseClicksThenPrintPositions();
      }
 }

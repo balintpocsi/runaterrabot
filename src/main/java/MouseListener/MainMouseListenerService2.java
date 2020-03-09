@@ -11,11 +11,11 @@ import org.jnativehook.NativeHookException;
 import org.jnativehook.mouse.NativeMouseEvent;
 import org.jnativehook.mouse.NativeMouseInputListener;
 
-public class MainMouseListenerService implements NativeMouseInputListener {
+public class MainMouseListenerService2 implements NativeMouseInputListener {
 
-public List<String> mouseClickedDatas;
+    private static List<String> mouseClickedDatas;
 
-    public MainMouseListenerService() {
+    public MainMouseListenerService2() {
         mouseClickedDatas = new ArrayList<>();
         LogManager.getLogManager().reset();
 
@@ -24,14 +24,13 @@ public List<String> mouseClickedDatas;
         logger.setLevel(Level.OFF);
     }
 
-    public List<String> getMouseClickedDatas() {
+    public static List<String> getMouseClickedDatas() {
         return mouseClickedDatas;
     }
 
     public void nativeMouseClicked(NativeMouseEvent e) {
         //System.out.println("Mouse Clicked: " + e.getClickCount());
         System.out.println("Mouse clicked at position: "+e.getX() + ", " + e.getY());
-        mouseClickedDatas.add("adsadasdasd");
         mouseClickedDatas.add(e.getX()+" "+e.getY());
         //return checkListSize();
     }
@@ -52,7 +51,7 @@ public List<String> mouseClickedDatas;
         System.out.println("Mouse Dragged: " + e.getX() + ", " + e.getY());
     }
 
-    private boolean checkListSize(){
+    private static boolean checkListSize(){
         return mouseClickedDatas.size() < 3;
     }
 
@@ -76,7 +75,7 @@ public List<String> mouseClickedDatas;
         GlobalScreen.addNativeMouseListener(mainMouseListenerService);
         while(checkListSize()){
             System.out.println("list actual size: "+getMouseClickedDatas().size());
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         }
 
         GlobalScreen.unregisterNativeHook();
@@ -89,7 +88,7 @@ public List<String> mouseClickedDatas;
         }
     }
 
-    public void trackingMouseClickPositions() throws InterruptedException, NativeHookException {
+    public static void main(String[] args) throws NativeHookException, InterruptedException {
         try {
             GlobalScreen.registerNativeHook();
         }
@@ -101,7 +100,7 @@ public List<String> mouseClickedDatas;
         }
 
         // Construct the example object.
-        MainMouseListenerService mainMouseListenerService = new MainMouseListenerService();
+        MainMouseListenerService2 mainMouseListenerService = new MainMouseListenerService2();
 
         // Add the appropriate listeners.
         //GlobalScreen.addNativeMouseListener(mouseListenerService);

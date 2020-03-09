@@ -2,55 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9f33203-9af8-4682-a00c-41980eab50eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MouseListener/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MouseListener/ManageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MouseListener/MouseListenerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MouseListener/NativeKeyboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MouseListener/NativeMouseInputListener2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MouseListener/NativeMouseListener2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MouseListener/MainMouseListenerService2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MouseListener/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MouseListener/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MouseListener/MainMouseListenerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MouseListener/MainMouseListenerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CachedMemory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CachedMemory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Cards/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cards/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Cards/Creature.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cards/Creature.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Cards/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cards/Deck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Cards/Spell.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cards/Spell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Cards/Teemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cards/Teemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IdentifyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IdentifyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/KeyboardService/Hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/KeyboardService/Hello.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/KeyboardService/KeyboardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/KeyboardService/KeyboardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/KeyboardService/ReadFromFileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/KeyboardService/ReadFromFileService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/BattlingPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/BattlingPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/CardCollectionsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/CardCollectionsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/CardPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/CardPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/MainMenuPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/MainMenuPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/RobotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/RobotService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/SelectYourDeckPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/SelectYourDeckPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/StartingHandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/StartingHandPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ReadValuesFromImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ReadValuesFromImageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RobotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RobotService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ScreenshotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ScreenshotService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/MouseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/MouseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/BlankArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/BlankArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/DrawingBoardWithMatrix$PaintSurface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/DrawingBoardWithMatrix$PaintSurface$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/DrawingBoardWithMatrix$PaintSurface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/DrawingBoardWithMatrix$PaintSurface$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/DrawingBoardWithMatrix$PaintSurface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/DrawingBoardWithMatrix$PaintSurface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/DrawingBoardWithMatrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/DrawingBoardWithMatrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/Main$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/Main$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/Main$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/Main$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/MouseEventDemo$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/MouseEventDemo$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/MouseEventDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/MouseEventDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/MouseListenerExample$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/MouseListenerExample$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/MouseListenerExample$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/MouseListenerExample$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/MouseListenerExample$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/MouseListenerExample$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/MouseListenerExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/MouseListenerExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experimental/SharpCanvasTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experimental/SharpCanvasTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/TestList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestList.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -98,7 +56,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="com.runaterra" />
@@ -132,23 +90,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestList.screenShotServiceTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MainMouseListenerService2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MouseListener.MainMouseListenerService2" />
       <module name="com.runaterra" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="screenShotServiceTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MouseListener.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestList.testMouseService" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestList.globalMouseListenerTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.runaterra" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="testMouseService" />
+      <option name="METHOD_NAME" value="globalMouseListenerTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -158,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainMouseListenerService" />
-        <item itemvalue="TestNG.TestList.testMouseService" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="TestNG.TestList.screenShotServiceTest" />
+        <item itemvalue="Application.MainMouseListenerService2" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="TestNG.TestList.globalMouseListenerTest" />
+        <item itemvalue="Application.MainMouseListenerService" />
       </list>
     </recent_temporary>
   </component>
