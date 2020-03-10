@@ -203,7 +203,7 @@ public class TestList {
     }
 
      @Test
-    public void globalMouseListenerTest() throws NativeHookException, InterruptedException {
+    public void globalMouseListenerTest() throws NativeHookException, InterruptedException, AWTException {
          MainMouseListenerService mainMouseListenerService = new MainMouseListenerService();
          mainMouseListenerService.trackingMouseClicksThenPrintPositions();
      }

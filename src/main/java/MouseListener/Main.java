@@ -1,5 +1,6 @@
 package MouseListener;
 
+import java.awt.AWTException;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -9,7 +10,7 @@ import org.jnativehook.NativeHookException;
 import org.jnativehook.mouse.NativeMouseEvent;
 
 public class Main {
-    public static void main(String[] args) throws NativeHookException, InterruptedException {
+    public static void main(String[] args) throws NativeHookException, InterruptedException, AWTException {
 //        LogManager.getLogManager().reset();
 //
 //        // Get the logger for "org.jnativehook" and set the level to off.
