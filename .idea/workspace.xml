@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9f33203-9af8-4682-a00c-41980eab50eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CardImages/01DE001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CardImages/01DE002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CardImages/01DE003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CardImages/01DE004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CardImages/01DE006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RobotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RobotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ScreenshotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScreenshotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RobotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RobotService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ScreenshotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ScreenshotService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestList.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +37,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Yl0d10TAuJNrfJPuD4dR7Ei1yM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -50,10 +65,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TestList.globalMouseListenerTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="TestNG.TestList.readValueAsStringFromImage">
+    <configuration name="TestList.cropImageByRectangleTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.runaterra" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestList" />
+      <option name="METHOD_NAME" value="cropImageByRectangleTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -70,11 +90,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestList.readFromJsonMethod2" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestList.readValueAsStringFromImage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.runaterra" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="readFromJsonMethod2" />
+      <option name="METHOD_NAME" value="readValueAsStringFromImage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -82,11 +102,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestList.returnBufferedImageReadItsValueTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestList.scanMousePositionAndColor" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.runaterra" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="returnBufferedImageReadItsValueTest" />
+      <option name="METHOD_NAME" value="scanMousePositionAndColor" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -108,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestList.readValueAsStringFromImage" />
+        <item itemvalue="TestNG.TestList.cropImageByRectangleTest" />
+        <item itemvalue="TestNG.TestList.scanMousePositionAndColor" />
         <item itemvalue="TestNG.TestList.globalMouseListenerTest" />
         <item itemvalue="TestNG.TestList.writeFromJsonFile" />
-        <item itemvalue="TestNG.TestList.readFromJsonMethod2" />
-        <item itemvalue="TestNG.TestList.returnBufferedImageReadItsValueTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -141,6 +161,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/com_runaterra$Main.ic" NAME="Main Coverage Results" MODIFIED="1583506063351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

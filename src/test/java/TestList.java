@@ -27,6 +27,7 @@ import PageObjects.BattlingPage;
 import PageObjects.MainMenuPage;
 import PageObjects.SelectYourDeckPage;
 import PageObjects.StartingHandPage;
+import net.sourceforge.tess4j.TesseractException;
 
 public class TestList {
 
@@ -240,4 +241,32 @@ public class TestList {
              Thread.sleep(800);
          }
      }
+
+     @Test
+    public void scanMousePositionAndColor() throws AWTException, InterruptedException {
+        RobotService robotService = new RobotService();
+         robotService.scanForColorValues();
+     }
+
+
+
+    /**
+     * You can crop an image by giving the rectangle's top left corner as x, y parameter,
+     * and the bottom right corner as x2, y2 parameters.
+     */
+     @Test
+    public void cropImageByRectangleTest() throws AWTException, IOException, InterruptedException {
+        ScreenshotService screenshotService = new ScreenshotService();
+         System.out.println("Get ready!");
+        Thread.sleep(4000);
+        screenshotService.cropImageByGivenRectangle(1435, 1056, 1517, 1089);
+         System.out.println("Operation ended.");
+     }
+
+     @Test
+    public void readValueAsStringFromImage() throws TesseractException {
+         ReadValuesFromImageService readValuesFromImageService = new ReadValuesFromImageService();
+         String valueFromImage = readValuesFromImageService.readFromImage("pass.png");
+         System.out.println(valueFromImage);
+    }
 }
