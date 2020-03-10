@@ -3,6 +3,7 @@ package PageObjects;
 import java.awt.AWTException;
 
 import Service.MouseService;
+import Service.RobotService;
 
 public class BattlingPage {
 

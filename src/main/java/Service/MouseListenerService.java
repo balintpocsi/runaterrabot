@@ -1,4 +1,4 @@
-package MouseListener;
+package Service;
 
 import java.awt.AWTException;
 import java.awt.Color;
@@ -12,8 +12,6 @@ import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.mouse.NativeMouseEvent;
 import org.jnativehook.mouse.NativeMouseInputListener;
-
-import PageObjects.RobotService;
 
 public class MouseListenerService implements NativeMouseInputListener {
 

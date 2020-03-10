@@ -1,3 +1,5 @@
+package Service;
+
 import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Rectangle;
@@ -6,7 +8,6 @@ import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.nio.Buffer;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -137,11 +138,11 @@ public class ScreenshotService {
     }
 
     public void cropImageByGivenRectangle(int x, int y, int x2, int y2) throws IOException {
-        Rectangle rect = new Rectangle(x, y, (x2-x), (y2-y));
-        Calendar now = Calendar.getInstance();
-        //BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
-        BufferedImage screenShot = robot.createScreenCapture(rect);
-        ImageIO.write(screenShot, "png", new File("C:\\screenshots\\"+formatter.format(now.getTime())+"_screenshot.png"));
-        System.out.println(formatter.format(now.getTime())+"_screenshot.png"+" created.");
+            Rectangle rect = new Rectangle(x, y, (x2 - x), (y2 - y));
+            Calendar now = Calendar.getInstance();
+            //BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+            BufferedImage screenShot = robot.createScreenCapture(rect);
+            ImageIO.write(screenShot, "png", new File("C:\\screenshots\\" + formatter.format(now.getTime()) + "_screenshot.png"));
+            System.out.println(formatter.format(now.getTime()) + "_screenshot.png" + " created.");
     }
 }

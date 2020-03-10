@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.util.List;
 
-import MouseListener.MouseListenerService;
+import Service.MouseListenerService;
 
 public class Main {
 
@@ -26,7 +26,7 @@ public class Main {
         //System.out.println(readValuesFromImageService.readFromImage("C:\\screenshots\\2020-03-06 05 26 47_screenshot.png"));
 
 //
-//        ScreenshotService screenshotService = new ScreenshotService();
+//        Service.ScreenshotService screenshotService = new Service.ScreenshotService();
 //
 //        list=screenshotService.getUniqueSequenceFromPicture(screenshotService.getBufferedImageByStaticCoordinates());
 //        screenshotService.drawUniqueSequenceOfColorsToWhiteFlatBoard(list);

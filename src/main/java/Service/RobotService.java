@@ -1,4 +1,4 @@
-package PageObjects;
+package Service;
 
 import java.awt.AWTException;
 import java.awt.Color;

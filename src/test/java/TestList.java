@@ -22,11 +22,13 @@ import org.jnativehook.NativeHookException;
 import org.json.JSONArray;
 import org.testng.annotations.Test;
 import KeyboardService.ReadFromFileService;
-import MouseListener.MouseListenerService;
+import Service.CropImageService;
+import Service.MouseListenerService;
 import PageObjects.BattlingPage;
 import PageObjects.MainMenuPage;
 import PageObjects.SelectYourDeckPage;
 import PageObjects.StartingHandPage;
+import Service.ScreenshotService;
 import net.sourceforge.tess4j.TesseractException;
 
 public class TestList {
@@ -145,29 +147,7 @@ public class TestList {
     }
 
     @Test
-    public void writeFromJsonFile() throws AWTException, InterruptedException {
-        ReadFromFileService readFromFileService = new ReadFromFileService();
-        JSONArray cardArray = new JSONArray(readFile());
-        System.out.println("Size: "+cardArray.length()+"\n");
-        Thread.sleep(3000);
-        String cardname;
-        for (int i =0;i<cardArray.length();i++){
-            cardname = cardArray.getJSONObject(i).get("name").toString();
-            readFromFileService.readFromString(cardname);
-            pressEnter();
-        }
-
-//        for(Object obj : cardArray){
-//           JSONObject jsonObject = (JSONObject) obj;
-//            System.out.println(jsonObject.get("name").toString());
-//            readFromFileService.readFromString(jsonObject.get("name").toString());
-//            Thread.sleep(20);
-//            pressEnter();
-//        }
-    }
-
-    @Test
-    public void testMouseService() throws AWTException, InterruptedException {
+    public void testMouseServiceNavigateToPlayMatch() throws AWTException, InterruptedException {
 
         MainMenuPage mainMenuPage = new MainMenuPage();
         SelectYourDeckPage selectYourDeckPage = new SelectYourDeckPage();
@@ -222,12 +202,6 @@ public class TestList {
     }
 
      @Test
-    public void globalMouseListenerTest() throws NativeHookException, InterruptedException, AWTException {
-         MouseListenerService mouseListenerService = new MouseListenerService();
-         mouseListenerService.trackingMouseClicksThenPrintPositions(5);
-     }
-
-     @Test
     public void returnBufferedImageReadItsValueTest() throws Exception {
          //navigateToPlayFromMainPage();
          //--------------------------------------------------------------------------------------------
@@ -242,31 +216,79 @@ public class TestList {
          }
      }
 
+    /**
+     * Send keyboard strokes based on card names test.
+     */
+    @Test
+    public void writeFromJsonFile() throws AWTException, InterruptedException {
+        ReadFromFileService readFromFileService = new ReadFromFileService();
+        JSONArray cardArray = new JSONArray(readFile());
+        System.out.println("Size: "+cardArray.length()+"\n");
+        Thread.sleep(3000);
+        String cardname;
+        for (int i =0;i<cardArray.length();i++){
+            cardname = cardArray.getJSONObject(i).get("name").toString();
+            readFromFileService.readFromString(cardname);
+            pressEnter();
+        }
+
+        //        for(Object obj : cardArray){
+        //           JSONObject jsonObject = (JSONObject) obj;
+        //            System.out.println(jsonObject.get("name").toString());
+        //            readFromFileService.readFromString(jsonObject.get("name").toString());
+        //            Thread.sleep(20);
+        //            pressEnter();
+        //        }
+    }
+
+    /**
+     * Scan for mouse positions and its rgb values as initialization informations.
+     */
      @Test
     public void scanMousePositionAndColor() throws AWTException, InterruptedException {
         RobotService robotService = new RobotService();
          robotService.scanForColorValues();
      }
 
-
-
     /**
      * You can crop an image by giving the rectangle's top left corner as x, y parameter,
      * and the bottom right corner as x2, y2 parameters.
      */
      @Test
-    public void cropImageByRectangleTest() throws AWTException, IOException, InterruptedException {
+    public void cropImageByRectangleTest() throws AWTException, IOException, InterruptedException, NativeHookException {
         ScreenshotService screenshotService = new ScreenshotService();
          System.out.println("Get ready!");
         Thread.sleep(4000);
-        screenshotService.cropImageByGivenRectangle(1435, 1056, 1517, 1089);
+        screenshotService.cropImageByGivenRectangle(1554, 1105, 1575, 1130);
          System.out.println("Operation ended.");
      }
 
+    /**
+     * Run this test for testing the service if it can read out the proper information from the cropped image.
+     */
      @Test
     public void readValueAsStringFromImage() throws TesseractException {
          ReadValuesFromImageService readValuesFromImageService = new ReadValuesFromImageService();
-         String valueFromImage = readValuesFromImageService.readFromImage("pass.png");
+         String valueFromImage = readValuesFromImageService.readFromImage("enemy name.png");
          System.out.println(valueFromImage);
+    }
+
+    /**
+     * Tracking the given number of mouse clicks and its rgb values by the parameter.
+     */
+    @Test
+    public void globalMouseListenerTest() throws NativeHookException, InterruptedException, AWTException {
+        MouseListenerService mouseListenerService = new MouseListenerService();
+        mouseListenerService.trackingMouseClicksThenPrintPositions(2);
+    }
+
+    /**
+     * Cropping image by 2 mouseclicks.
+     */
+    @Test
+    public void cropImageServiceTest() throws AWTException, InterruptedException, NativeHookException, IOException {
+        CropImageService cropImageService = new CropImageService();
+        cropImageService.cropImageByGiven2MouseClicks();
+        //nem lehet ismetelni akkor sem ha kulon peldanyokon hivom meg ugyan ezt a (cropImageByGiven2MouseClicks()) metodust
     }
 }
