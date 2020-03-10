@@ -22,7 +22,7 @@ import org.jnativehook.NativeHookException;
 import org.json.JSONArray;
 import org.testng.annotations.Test;
 import KeyboardService.ReadFromFileService;
-import MouseListener.MainMouseListenerService;
+import MouseListener.MouseListenerService;
 import PageObjects.BattlingPage;
 import PageObjects.MainMenuPage;
 import PageObjects.SelectYourDeckPage;
@@ -222,8 +222,8 @@ public class TestList {
 
      @Test
     public void globalMouseListenerTest() throws NativeHookException, InterruptedException, AWTException {
-         MainMouseListenerService mainMouseListenerService = new MainMouseListenerService();
-         mainMouseListenerService.trackingMouseClicksThenPrintPositions();
+         MouseListenerService mouseListenerService = new MouseListenerService();
+         mouseListenerService.trackingMouseClicksThenPrintPositions(1);
      }
 
      @Test

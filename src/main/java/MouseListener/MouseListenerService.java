@@ -15,13 +15,13 @@ import org.jnativehook.mouse.NativeMouseInputListener;
 
 import PageObjects.RobotService;
 
-public class MainMouseListenerService implements NativeMouseInputListener {
+public class MouseListenerService implements NativeMouseInputListener {
 
     //why static is needed here?
     private static List<String> mouseClickedDatas;
     private RobotService robotService;
 
-    public MainMouseListenerService() throws AWTException {
+    public MouseListenerService() throws AWTException {
         mouseClickedDatas = new ArrayList<>();
         robotService = new RobotService();
         LogManager.getLogManager().reset();
@@ -65,11 +65,11 @@ public class MainMouseListenerService implements NativeMouseInputListener {
         System.out.println("Mouse Dragged: " + e.getX() + ", " + e.getY());
     }
 
-    private boolean checkListSize(){
-        return mouseClickedDatas.size() < 3;
+    private boolean checkListSize(int numberOfMouseClicksToTrack){
+        return mouseClickedDatas.size() < numberOfMouseClicksToTrack;
     }
 
-    public void trackingMouseClicksThenPrintPositions() throws InterruptedException, NativeHookException, AWTException {
+    public void trackingMouseClicksThenPrintPositions(int numberOfMouseClicksToTrack) throws InterruptedException, NativeHookException, AWTException {
         try {
             GlobalScreen.registerNativeHook();
         }
@@ -81,15 +81,15 @@ public class MainMouseListenerService implements NativeMouseInputListener {
         }
 
         // Construct the example object.
-        MainMouseListenerService mainMouseListenerService = new MainMouseListenerService();
+        MouseListenerService mouseListenerService = new MouseListenerService();
 
         // Add the appropriate listeners.
         //GlobalScreen.addNativeMouseListener(mouseListenerService);
 
-        GlobalScreen.addNativeMouseListener(mainMouseListenerService);
-        while(checkListSize()){
+        GlobalScreen.addNativeMouseListener(mouseListenerService);
+        while(checkListSize(numberOfMouseClicksToTrack)){
             System.out.println("list actual size: "+getMouseClickedDatas().size());
-            Thread.sleep(2000);
+            Thread.sleep(700);
         }
 
         GlobalScreen.unregisterNativeHook();
@@ -100,39 +100,5 @@ public class MainMouseListenerService implements NativeMouseInputListener {
         for (String s : getMouseClickedDatas()){
             System.out.println(s);
         }
-    }
-
-    public void trackingMouseClickPositions() throws InterruptedException, NativeHookException, AWTException {
-        try {
-            GlobalScreen.registerNativeHook();
-        }
-        catch (NativeHookException ex) {
-            System.err.println("There was a problem registering the native hook.");
-            System.err.println(ex.getMessage());
-
-            System.exit(1);
-        }
-
-        // Construct the example object.
-        MainMouseListenerService mainMouseListenerService = new MainMouseListenerService();
-
-        // Add the appropriate listeners.
-        //GlobalScreen.addNativeMouseListener(mouseListenerService);
-
-        GlobalScreen.addNativeMouseListener(mainMouseListenerService);
-        while(checkListSize()){
-            System.out.println("list actual size: "+getMouseClickedDatas().size());
-            Thread.sleep(2000);
-        }
-
-        GlobalScreen.unregisterNativeHook();
-
-        System.out.println("Initialization ended.");
-        System.out.println("List size: "+getMouseClickedDatas().size());
-        System.out.println("Coordinates:");
-        for (String s : getMouseClickedDatas()){
-            System.out.println(s);
-        }
-
     }
 }
