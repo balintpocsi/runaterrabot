@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b9f33203-9af8-4682-a00c-41980eab50eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MouseListener/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MouseListener/MainMouseListenerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MouseListener/MouseListenerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MouseListener/MouseListenerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MouseListener/MouseListenerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/TestList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestList.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,24 +60,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MouseListener.Main" />
-      <module name="com.runaterra" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MouseListener.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestList.globalMouseListenerTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.runaterra" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestList" />
       <option name="METHOD_NAME" value="globalMouseListenerTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestList.readFromJsonMethod2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com.runaterra" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestList" />
+      <option name="METHOD_NAME" value="readFromJsonMethod2" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -100,11 +96,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestList.screenShotServiceTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestList.writeFromJsonFile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.runaterra" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="screenShotServiceTest" />
+      <option name="METHOD_NAME" value="writeFromJsonFile" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -115,10 +111,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.TestList.globalMouseListenerTest" />
+        <item itemvalue="TestNG.TestList.writeFromJsonFile" />
+        <item itemvalue="TestNG.TestList.readFromJsonMethod2" />
         <item itemvalue="TestNG.TestList.returnBufferedImageReadItsValueTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="TestNG.TestList.screenShotServiceTest" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>

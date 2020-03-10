@@ -22,31 +22,32 @@ public class MouseListenerService implements NativeMouseInputListener {
     private RobotService robotService;
 
     public MouseListenerService() throws AWTException {
+        turnOffMouseEventLogging();
         mouseClickedDatas = new ArrayList<>();
         robotService = new RobotService();
-        LogManager.getLogManager().reset();
-
-        // Get the logger for "org.jnativehook" and set the level to off.
-        Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
-        logger.setLevel(Level.OFF);
     }
 
     public List<String> getMouseClickedDatas() {
         return mouseClickedDatas;
     }
 
+    private void turnOffMouseEventLogging(){
+        LogManager.getLogManager().reset();
+        // Get the logger for "org.jnativehook" and set the level to off.
+        Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
+        logger.setLevel(Level.OFF);
+    }
+
     public void nativeMouseClicked(NativeMouseEvent e) {
         int[] array = new int[2];
-         String[] coordinatesStringArray =  (e.getX()+" "+e.getY()).split(" ");
-         array[0] = Integer.parseInt(coordinatesStringArray[0]);
+        String[] coordinatesStringArray =  (e.getX()+" "+e.getY()).split(" ");
+        array[0] = Integer.parseInt(coordinatesStringArray[0]);
         array[1] = Integer.parseInt(coordinatesStringArray[1]);
-        //System.out.println("Mouse Clicked: " + e.getClickCount());
         System.out.println("Mouse clicked at position: "+e.getX() + ", " + e.getY());
         Color color = robotService.getColorValuesOfGivenPosition(array);
         System.out.println("RGB value: "+color.getRGB());
         System.out.println("("+color.getRed()+", "+color.getGreen()+", "+color.getBlue()+")");
         mouseClickedDatas.add(e.getX()+" "+e.getY());
-        //return checkListSize();
     }
 
     public void nativeMousePressed(NativeMouseEvent e) {
@@ -65,7 +66,7 @@ public class MouseListenerService implements NativeMouseInputListener {
         System.out.println("Mouse Dragged: " + e.getX() + ", " + e.getY());
     }
 
-    private boolean checkListSize(int numberOfMouseClicksToTrack){
+    private boolean checkNumberOfClicks(int numberOfMouseClicksToTrack){
         return mouseClickedDatas.size() < numberOfMouseClicksToTrack;
     }
 
@@ -83,11 +84,9 @@ public class MouseListenerService implements NativeMouseInputListener {
         // Construct the example object.
         MouseListenerService mouseListenerService = new MouseListenerService();
 
-        // Add the appropriate listeners.
-        //GlobalScreen.addNativeMouseListener(mouseListenerService);
-
+        // Add the appropriate listeners
         GlobalScreen.addNativeMouseListener(mouseListenerService);
-        while(checkListSize(numberOfMouseClicksToTrack)){
+        while(checkNumberOfClicks(numberOfMouseClicksToTrack)){
             System.out.println("list actual size: "+getMouseClickedDatas().size());
             Thread.sleep(700);
         }
