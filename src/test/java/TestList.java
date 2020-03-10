@@ -94,7 +94,7 @@ public class TestList {
         graphics.drawRect(0, 0, 249, 375);
         graphics.dispose();
 
-        File outputfile = new File("saved.png");
+        File outputfile = new File("teemo_saved.png");
         ImageIO.write(image, "png", outputfile);
     }
 
@@ -290,5 +290,31 @@ public class TestList {
         CropImageService cropImageService = new CropImageService();
         cropImageService.cropImageByGiven2MouseClicks();
         //nem lehet ismetelni akkor sem ha kulon peldanyokon hivom meg ugyan ezt a (cropImageByGiven2MouseClicks()) metodust
+    }
+
+    @Test
+    public void readImagesAndStoreUniqueColorId() throws IOException {
+
+        List<Integer> rgbValueUniqueIdList = new ArrayList<>();
+
+        File file = new File("01DE001.png");
+        BufferedImage image = ImageIO.read(file);
+
+        int heightValueConst = 400;
+
+        Color color = new Color(image.getRGB(3,3));
+        System.out.println(color.getRed()+" "+color.getGreen()+" "+color.getBlue());
+
+        for (int widthStartValue = 226; widthStartValue < 453; widthStartValue++){
+            rgbValueUniqueIdList.add(image.getRGB(widthStartValue, heightValueConst));
+            image.setRGB(widthStartValue,heightValueConst, new Color(255, 255, 255).getRGB());
+        }
+
+        System.out.println("Size:");
+        System.out.println(rgbValueUniqueIdList.size());
+
+        File outputfile = new File("01DE001_saved2.png");
+        ImageIO.write(image, "png", outputfile);
+
     }
 }
