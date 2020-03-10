@@ -185,6 +185,24 @@ public class TestList {
         Thread.sleep(3000);
     }
 
+    public void navigateToPlayFromMainPage() throws AWTException, InterruptedException {
+        MainMenuPage mainMenuPage = new MainMenuPage();
+        SelectYourDeckPage selectYourDeckPage = new SelectYourDeckPage();
+        StartingHandPage startingHandPage = new StartingHandPage();
+        BattlingPage battlingPage = new BattlingPage();
+
+        Thread.sleep(5000);
+
+        mainMenuPage.clickOnPlay();
+        Thread.sleep(1000);
+        selectYourDeckPage.selectFirstDeck();
+        Thread.sleep(1000);
+        selectYourDeckPage.confirmPlay();
+        Thread.sleep(1000);
+        startingHandPage.confirmOkayToHand();
+        Thread.sleep(3000);
+    }
+
     @Test
     public void checkManaTest() throws AWTException, InterruptedException {
         System.out.println("started");
@@ -206,5 +224,20 @@ public class TestList {
     public void globalMouseListenerTest() throws NativeHookException, InterruptedException, AWTException {
          MainMouseListenerService mainMouseListenerService = new MainMouseListenerService();
          mainMouseListenerService.trackingMouseClicksThenPrintPositions();
+     }
+
+     @Test
+    public void returnBufferedImageReadItsValueTest() throws Exception {
+         //navigateToPlayFromMainPage();
+         //--------------------------------------------------------------------------------------------
+         ReadValuesFromImageService readValuesFromImageService = new ReadValuesFromImageService();
+         ScreenshotService screenshotService = new ScreenshotService();
+         Thread.sleep(4000);
+         while(true){
+             BufferedImage bufferedImage = screenshotService.makeScreenshotReturnBufferedImage(1659, 708, 40, 40);
+             String valueFromBufferedImage = readValuesFromImageService.readFromBufferedImage(bufferedImage);
+             System.out.println("Number of round: "+valueFromBufferedImage);
+             Thread.sleep(800);
+         }
      }
 }

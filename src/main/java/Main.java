@@ -17,10 +17,11 @@ public class Main {
         ReadValuesFromImageService readValuesFromImageService = new ReadValuesFromImageService();
         MainMouseListenerService mainMouseListenerService = new MainMouseListenerService();
 //
-        //WORKING - Read value from image = 4
-       //System.out.println(readValuesFromImageService.readFromImage("2020-03-06 05 26 47_screenshot.png"));
+        //WORKING - Read value from image = 2 and 4
+       System.out.println(readValuesFromImageService.readFromImage("2020-03-10 12 18 18_screenshot.png"));
+        System.out.println(readValuesFromImageService.readFromImage("2020-03-06 05 26 47_screenshot.png"));
 
-       mainMouseListenerService.trackingMouseClicksThenPrintPositions();
+       //mainMouseListenerService.trackingMouseClicksThenPrintPositions();
 
         //System.out.println(readValuesFromImageService.readFromImage("C:\\screenshots\\2020-03-06 05 26 47_screenshot.png"));
 
