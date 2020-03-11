@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9f33203-9af8-4682-a00c-41980eab50eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/01DE001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01DE001_saved.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01DE001_saved2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teemo_saved.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/ImageIdentifyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teemo_exp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/TestList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestList.class" afterDir="false" />
@@ -59,19 +57,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TestList.readImagesAndStoreUniqueColorId">
-    <configuration name="TestList.cropImageByRectangleTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com.runaterra" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="cropImageByRectangleTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.TestList.identifyColorSequenceInPicture">
     <configuration name="TestList.cropImageServiceTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.runaterra" />
       <option name="PACKAGE_NAME" value="" />
@@ -89,6 +75,18 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestList" />
       <option name="METHOD_NAME" value="getColorFromImage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestList.identifyColorSequenceInPicture" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com.runaterra" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestList" />
+      <option name="METHOD_NAME" value="identifyColorSequenceInPicture" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -122,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestList.identifyColorSequenceInPicture" />
+        <item itemvalue="TestNG.TestList.cropImageServiceTest" />
         <item itemvalue="TestNG.TestList.readImagesAndStoreUniqueColorId" />
         <item itemvalue="TestNG.TestList.getColorFromImage" />
-        <item itemvalue="TestNG.TestList.cropImageServiceTest" />
         <item itemvalue="TestNG.TestList.readValueAsStringFromImage" />
-        <item itemvalue="TestNG.TestList.cropImageByRectangleTest" />
       </list>
     </recent_temporary>
   </component>
