@@ -18,13 +18,13 @@ import java.util.Queue;
 import java.util.stream.Stream;
 import javax.imageio.ImageIO;
 
-import org.apache.xmlgraphics.image.codec.png.PNGEncodeParam;
 import org.jnativehook.NativeHookException;
 import org.json.JSONArray;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import KeyboardService.ReadFromFileService;
 import Service.CropImageService;
-import Service.ImageIdentifyService;
 import Service.MouseListenerService;
 import PageObjects.BattlingPage;
 import PageObjects.MainMenuPage;
@@ -341,14 +341,15 @@ public class TestList {
     }
 
     @Test
-    public void identifyColorSequenceInPicture() throws IOException {
+    public void identifyTargetImage1() throws IOException {
         boolean answer = false;
-        File file = new File("teemo.png");
+        File targetFileToIdentify = new File("teemo.png");
         List<Color> uniqueColorList = getUniqueColorListIdFromImage();
-        BufferedImage bufferedImage = ImageIO.read(file);
+        BufferedImage targetImageToIdentify = ImageIO.read(targetFileToIdentify);
         System.out.println("list size: "+uniqueColorList.size());
-        System.out.println("szelesseg: "+bufferedImage.getWidth());
-        System.out.println("magassag: "+bufferedImage.getHeight());
+        System.out.println("szelesseg: "+targetImageToIdentify.getWidth());
+        System.out.println("magassag: "+targetImageToIdentify.getHeight());
+        List<Color> resultColorList = new ArrayList<>();
 
 //        for (int i =0;i<bufferedImage.getHeight();i++){
 //            for(int z = 0; z<bufferedImage.getWidth();z++){
@@ -360,10 +361,10 @@ public class TestList {
 //        }
 
 
-        for (int z = 0;z<bufferedImage.getWidth()-uniqueColorList.size();z++){
+        for (int z = 0;z<targetImageToIdentify.getWidth()-uniqueColorList.size();z++){
             int magicScore50 = 0;
             boolean isUniqueSequenceFound = false;
-            Color color = new Color(bufferedImage.getRGB(z, 100));
+            Color color = new Color(targetImageToIdentify.getRGB(z, 100));
 
             System.out.println(z);
             for (int c = 0; c<uniqueColorList.size();c++){
@@ -372,14 +373,15 @@ public class TestList {
 
                 boolean hasPreviousElement = false;
 
-                if(z != 0 && c != 0){
-                    hasPreviousElement = true;
-                    //System.out.println("boolean: "+uniqueColorList.get(c-1).equals(new Color(bufferedImage.getRGB(z-1,100))));
-                }
+//                if(z != 0 && c != 0){
+//                    hasPreviousElement = true;
+//                    //System.out.println("boolean: "+uniqueColorList.get(c-1).equals(new Color(bufferedImage.getRGB(z-1,100))));
+//                }
 
-
-                if (color.equals(uniqueColorList.get(c)) && hasPreviousElement && uniqueColorList.get(c-1).equals(new Color(bufferedImage.getRGB(z-1,100)))){
-                    System.out.print("X ");
+                //if (color.equals(uniqueColorList.get(c)) && hasPreviousElement && uniqueColorList.get(c-1).equals(new Color(targetImageToIdentify.getRGB(z-1,100)))){
+                    if (color.equals(uniqueColorList.get(c))){
+                        System.out.print("X ");
+                    resultColorList.add(color);
                 } else {
                     //isAstreak = false;
                 }
@@ -390,13 +392,122 @@ public class TestList {
 
             if (magicScore50 == 50){
                 isUniqueSequenceFound = true;
-                System.out.println("we found it");
+                System.out.println("found it");
                 System.out.println("magic row: "+z);
             }
             answer = isUniqueSequenceFound;
 
         }
+
         System.out.println("final boolean: "+answer);
         //ImageIdentifyService imageIdentifyService = new ImageIdentifyService(file, );
+    }
+
+    private boolean identifyCardByRow(int whichNumberOfRow) throws IOException {
+        List<Color> colorRowFromImage = getColorRowFromImage(whichNumberOfRow); //100. row from image
+        List<Color> uniqueColorList = getUniqueColorListIdFromImage(); //   size: 50 Teemo's unique color list ID
+        List<Color> resultList = new ArrayList<>();
+        List<Integer> startCoordsList = new ArrayList<>();
+
+        for (int i = 0; i < colorRowFromImage.size()-uniqueColorList.size();i++){
+            if(colorRowFromImage.get(i).equals(uniqueColorList.get(0))){
+                startCoordsList.add(i);
+            }
+        }
+
+        for(int i = 0;i<startCoordsList.size();i++){
+            int startIndex = startCoordsList.get(i); //100
+            System.out.println("current index:"+i);
+            System.out.println("start index: "+startIndex);
+            for (int z = 0;z<50;z++){
+                if(uniqueColorList.get(z).equals(colorRowFromImage.get(startIndex+z))){
+                    resultList.add(colorRowFromImage.get(startIndex+z));
+                }else{
+                    resultList.clear();
+                    break;
+                }
+            }
+        }
+
+        System.out.println("coords:");
+        for (Integer integer : startCoordsList){
+            System.out.println(integer);
+        }
+
+        System.out.println("Result:");
+        System.out.println(uniqueColorList.toString());
+        System.out.println(resultList.toString());
+
+        return uniqueColorList.equals(resultList);
+    }
+
+
+    /**
+     * Working identify image.
+     */
+    @Test
+    public void identifyTargetImage2() throws IOException {
+
+        List<Color> colorRowFromImage = getColorRowFromImage(100); //100. row from image
+        List<Color> uniqueColorList = getUniqueColorListIdFromImage(); //   size: 50
+        List<Color> resultList = new ArrayList<>();
+        List<Integer> startCoordsList = new ArrayList<>();
+
+       for (int i = 0; i < colorRowFromImage.size()-uniqueColorList.size();i++){
+            if(colorRowFromImage.get(i).equals(uniqueColorList.get(0))){
+                startCoordsList.add(i);
+            }
+       }
+
+       for(int i = 0;i<startCoordsList.size();i++){
+           int startIndex = startCoordsList.get(i); //100
+           System.out.println("current index:"+i);
+           System.out.println("start index: "+startIndex);
+           for (int z = 0;z<50;z++){
+               if(uniqueColorList.get(z).equals(colorRowFromImage.get(startIndex+z))){
+                   resultList.add(colorRowFromImage.get(startIndex+z));
+               }else{
+                   resultList.clear();
+                   break;
+               }
+           }
+       }
+
+        System.out.println("coords:");
+       for (Integer integer : startCoordsList){
+           System.out.println(integer);
+        }
+
+        System.out.println("Result:");
+        System.out.println(uniqueColorList.toString());
+        System.out.println(resultList.toString());
+        Assert.assertEquals(uniqueColorList, resultList);
+
+    }
+
+    private List<Color> getColorRowFromImage(int rowIndex) throws IOException {
+        List<Color> rowColorFromImage = new ArrayList<>();
+        File image = new File("teemo.png");
+        BufferedImage targetImageToIdentify = ImageIO.read(image);
+
+        for (int i = 0; i < targetImageToIdentify.getWidth();i++){
+            Color color = new Color(targetImageToIdentify.getRGB(i, rowIndex));
+            rowColorFromImage.add(color);
+        }
+        return rowColorFromImage;
+    }
+
+
+    @Test
+    public void identifyByRowTest() throws IOException {
+        //250 width
+        //376 height
+        for(int i = 0;i<376;i++){
+            if(identifyCardByRow(i)){
+                System.out.println("got it: "+i);
+                break;
+            }
+        }
+        System.out.println("Exiting...");
     }
 }
