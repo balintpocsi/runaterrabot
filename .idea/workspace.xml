@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9f33203-9af8-4682-a00c-41980eab50eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CardImages/aeronut_big.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CardImages/chempunk_mini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CardImages/just the string aeronut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CardImages/starting hand.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cards/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cards/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/ScreenshotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ScreenshotService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Cards/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cards/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teemo_exp.png" beforeDir="false" afterPath="$PROJECT_DIR$/teemo_exp.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,13 +41,14 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CardImages" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="PageObjects" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\bot\runaterrabot\CardImages" />
       <recent name="C:\bot\runaterrabot" />
     </key>
   </component>
@@ -55,11 +65,35 @@
     </option>
   </component>
   <component name="RunManager" selected="TestNG.TestList.identifyByRowTest">
-    <configuration name="TestList.getColorFromImage" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestList.cardReferenceMapTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.runaterra" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="getColorFromImage" />
+      <option name="METHOD_NAME" value="cardReferenceMapTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestList.cropImageServiceTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com.runaterra" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestList" />
+      <option name="METHOD_NAME" value="cropImageServiceTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestList.fullScreenshotTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="com.runaterra" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestList" />
+      <option name="METHOD_NAME" value="fullScreenshotTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -79,35 +113,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestList.identifyColorSequenceInPicture" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestList.readValueAsStringFromImage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="com.runaterra" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="identifyColorSequenceInPicture" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestList.identifyTargetImage1" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com.runaterra" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="identifyTargetImage1" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestList.identifyTargetImage2" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="com.runaterra" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestList" />
-      <option name="METHOD_NAME" value="identifyTargetImage2" />
+      <option name="METHOD_NAME" value="readValueAsStringFromImage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -118,10 +128,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.TestList.identifyByRowTest" />
-        <item itemvalue="TestNG.TestList.identifyTargetImage2" />
-        <item itemvalue="TestNG.TestList.identifyTargetImage1" />
-        <item itemvalue="TestNG.TestList.getColorFromImage" />
-        <item itemvalue="TestNG.TestList.identifyColorSequenceInPicture" />
+        <item itemvalue="TestNG.TestList.fullScreenshotTest" />
+        <item itemvalue="TestNG.TestList.readValueAsStringFromImage" />
+        <item itemvalue="TestNG.TestList.cropImageServiceTest" />
+        <item itemvalue="TestNG.TestList.cardReferenceMapTest" />
       </list>
     </recent_temporary>
   </component>

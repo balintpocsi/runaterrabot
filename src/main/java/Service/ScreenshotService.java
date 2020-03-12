@@ -37,6 +37,13 @@ public class ScreenshotService {
         return robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
     }
 
+    public void fullScreenshot() throws Exception {
+        Calendar now = Calendar.getInstance();
+        BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+        ImageIO.write(screenShot, "png", new File("C:\\screenshots\\"+formatter.format(now.getTime())+"_screenshot.png"));
+        System.out.println(formatter.format(now.getTime())+"_screenshot.png"+" created.");
+    }
+
     public void makeScreenshotVoid(int x, int y, int width, int height) throws Exception {
         Rectangle rect = new Rectangle(x, y, width, height);
         Calendar now = Calendar.getInstance();

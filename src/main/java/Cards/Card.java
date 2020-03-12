@@ -20,6 +20,13 @@ public class Card {
         this.damage = damage;
     }
 
+    public Card(String name, int cost, int damage) {
+        this.uniqueColorSequence = uniqueColorSequence;
+        this.name = name;
+        this.cost = cost;
+        this.damage = damage;
+    }
+
     public List<Color> getUniqueColorSequence() {
         return uniqueColorSequence;
     }
