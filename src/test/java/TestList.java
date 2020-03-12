@@ -320,6 +320,9 @@ public class TestList {
 
     }
 
+
+    //IDENTIFY ALGORITHM BASED ON THIS METHOD
+    //MAGIC NUMBERS SHOULD BE REMOVED
     private List<Color> getUniqueColorListIdFromImage() throws IOException {
         List<Integer> rgbValueUniqueIdList = new ArrayList<>();
         List<Color> colorList = new ArrayList<>();
@@ -405,7 +408,7 @@ public class TestList {
 
     private boolean identifyCardByRow(int whichNumberOfRow) throws IOException {
         List<Color> colorRowFromImage = getColorRowFromImage(whichNumberOfRow); //100. row from image
-        List<Color> uniqueColorList = getUniqueColorListIdFromImage(); //   size: 50 Teemo's unique color list ID
+        final List<Color> uniqueColorList = getUniqueColorListIdFromImage(); //   size: 50 Teemo's unique color list ID
         List<Color> resultList = new ArrayList<>();
         List<Integer> startCoordsList = new ArrayList<>();
 
@@ -419,7 +422,7 @@ public class TestList {
             int startIndex = startCoordsList.get(i); //100
             System.out.println("current index:"+i);
             System.out.println("start index: "+startIndex);
-            for (int z = 0;z<50;z++){
+            for (int z = 0;z<uniqueColorList.size();z++){     //z < 50 (uniqueColorList.size())
                 if(uniqueColorList.get(z).equals(colorRowFromImage.get(startIndex+z))){
                     resultList.add(colorRowFromImage.get(startIndex+z));
                 }else{
@@ -485,6 +488,9 @@ public class TestList {
 
     }
 
+    /**
+     * Get the List<Color> from the given row by the rowIndex param.
+     */
     private List<Color> getColorRowFromImage(int rowIndex) throws IOException {
         List<Color> rowColorFromImage = new ArrayList<>();
         File image = new File("teemo.png");
@@ -494,15 +500,17 @@ public class TestList {
             Color color = new Color(targetImageToIdentify.getRGB(i, rowIndex));
             rowColorFromImage.add(color);
         }
-        return rowColorFromImage;
+        return rowColorFromImage;  //returns for example the List<Color> of the 100. row.
     }
 
-
+    /**
+     * Working identify image.
+     */
     @Test
     public void identifyByRowTest() throws IOException {
         //250 width
         //376 height
-        for(int i = 0;i<376;i++){
+        for(int i = 0;i<376;i++){                       //magic number should be removed!!!!
             if(identifyCardByRow(i)){
                 System.out.println("got it: "+i);
                 break;
