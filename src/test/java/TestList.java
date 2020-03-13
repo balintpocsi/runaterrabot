@@ -589,14 +589,14 @@ public class TestList {
      */
     @Test
     public void identifyByRowTest() throws IOException {
-        File file = new File("CardImages/chempunk_mini.png");
-        File file2 = new File("CardImages/starting hand.png");
-        BufferedImage image = ImageIO.read(file2);
-        List<Color> uniqueColorList = getUniqueColorListIdFromImage(file);
+        File chempunkMini = new File("CardImages/chempunk_mini.png");
+        File startingHand = new File("CardImages/starting hand.png");
+        BufferedImage startingHandImage = ImageIO.read(startingHand);
+        List<Color> uniqueColorList = getUniqueColorListIdFromImage(chempunkMini);
         //250 width
         //376 height
-        for(int i = 0;i<image.getHeight();i++){                       //magic number should be removed!!!!
-            if(identifyCardByRow(i, uniqueColorList)){
+        for(int i = 0;i<startingHandImage.getHeight();i++){                       //magic number should be removed!!!!
+            if(identifyCardByRow(i, uniqueColorList)){              //getColorRowFromImage() method-ban van definialva hogy melyik image-el hasonlitja ossze
                 System.out.println("got it: "+i);
                 break;
             }
