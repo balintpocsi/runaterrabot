@@ -20,6 +20,7 @@ import java.util.Queue;
 import java.util.stream.Stream;
 import javax.imageio.ImageIO;
 
+import Service.MouseService;
 import org.jnativehook.NativeHookException;
 import org.json.JSONArray;
 import org.testng.Assert;
@@ -274,7 +275,7 @@ public class TestList {
      @Test
     public void readValueAsStringFromImage() throws TesseractException {
          ReadValuesFromImageService readValuesFromImageService = new ReadValuesFromImageService();
-         String valueFromImage = readValuesFromImageService.readFromImage("CardImages/just the string aeronut_big.png");
+         String valueFromImage = readValuesFromImageService.readFromImage("CardImages/1.png");
          System.out.println(valueFromImage);
     }
 
@@ -284,7 +285,7 @@ public class TestList {
     @Test
     public void globalMouseListenerTest() throws NativeHookException, InterruptedException, AWTException {
         MouseListenerService mouseListenerService = new MouseListenerService();
-        mouseListenerService.trackingMouseClicksThenPrintPositions(2);
+        mouseListenerService.trackingMouseClicksThenPrintPositions(1);
     }
 
     /**
@@ -635,6 +636,17 @@ public class TestList {
         while (true){
             Thread.sleep(2000);
             screenshotService.fullScreenshot();
+        }
+    }
+
+    @Test
+    public void screenshotCard() throws Exception {
+        ScreenshotService screenshotService = new ScreenshotService();
+        System.out.println("Started...");
+        Thread.sleep(3000);
+        while(true){
+            screenshotService.makeScreenshotVoid(559, 127, 290, 267);
+            Thread.sleep(2000);
         }
     }
 }

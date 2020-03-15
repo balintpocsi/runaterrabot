@@ -9,5 +9,8 @@
         <module name="com.runaterra" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.runaterra" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

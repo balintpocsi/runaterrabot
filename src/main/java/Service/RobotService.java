@@ -110,6 +110,16 @@ public class RobotService {
 
     }
 
+    public boolean loopUntilGivenRGBVaueIsFoundThenRightMouseClick(int r, int g, int b) throws InterruptedException {
+        boolean notFoundTargetColor = true;
+        while(notFoundTargetColor){
+            Thread.sleep(2000);
+            //System.out.println(printSomethingIfFoundColorAtGivenPosition(r, g, b));
+            notFoundTargetColor = printSomethingIfFoundColorAtGivenPosition(r, g, b);
+        }
+        return true;
+    }
+
     public boolean loopUntilGivenRGBVaueIsFoundReturnBoolean(int r, int g, int b) {
         return printSomethingIfFoundColorAtGivenPosition(r, g, b);
     }

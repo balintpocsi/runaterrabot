@@ -49,7 +49,7 @@ public class ScreenshotService {
         Calendar now = Calendar.getInstance();
         //BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
         BufferedImage screenShot = robot.createScreenCapture(rect);
-        ImageIO.write(screenShot, "png", new File("C:\\screenshots\\"+formatter.format(now.getTime())+"_screenshot.png"));
+        ImageIO.write(screenShot, "png", new File("C:\\screenshot\\"+formatter.format(now.getTime())+"_screenshot.png"));
         System.out.println(formatter.format(now.getTime())+"_screenshot.png"+" created.");
     }
 

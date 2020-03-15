@@ -10,7 +10,7 @@ public class ReadValuesFromImageService {
 
     public ReadValuesFromImageService() {
         this.tesseract = new Tesseract();
-        tesseract.setDatapath("C:\\comrunaterra\\tessdata");
+        tesseract.setDatapath("tessdata");
     }
 
     public String readFromImage(String path) throws TesseractException {

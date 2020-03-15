@@ -1,0 +1,88 @@
+Play button
+Mouse clicked at position: 1154, 686
+RGB value: -415418
+(249, 169, 70)
+
+376 577 - 1. card change
+577 576 - 2. card change
+780 575 - 3. card change
+981 578 - 4. card change
+
+//can be calculated from previous coords (y-200)
+380 381 - 1. card itself
+583 381 - 2. card itself
+787 381 - 3. card itself
+984 379 - 4. card itself
+
+hand OK button
+Mouse clicked at position: 1200, 385
+RGB value: -1
+(255, 255, 255)
+
+1 mana
+Mouse clicked at position: 1171, 464
+RGB value: -11896577
+(74, 120, 255)
+
+2 mana
+Mouse clicked at position: 1183, 463
+RGB value: -11698945
+(77, 124, 255)
+
+3 mana
+Mouse clicked at position: 1196, 461
+RGB value: -11501057
+(80, 129, 255)
+
+4 mana
+Mouse clicked at position: 1208, 458
+RGB value: -11962369
+(73, 119, 255)
+
+5 mana
+Mouse clicked at position: 1218, 451
+RGB value: -11303169
+(83, 134, 255)
+
+6 mana
+Mouse clicked at position: 1228, 444
+RGB value: -11632897
+(78, 126, 255)
+
+7 mana
+Mouse clicked at position: 1237, 435
+RGB value: -11303425
+(83, 133, 255)
+
+8 mana
+Mouse clicked at position: 1244, 425
+RGB value: -11303169
+(83, 134, 255)
+
+9 mana
+Mouse clicked at position: 1250, 414
+RGB value: -11764737
+(76, 123, 255)
+
+10 mana
+Mouse clicked at position: 1253, 402
+RGB value: -11105281
+(86, 139, 255)
+
+1 spell mana
+Mouse clicked at position: 1196, 487
+RGB value: -12779521
+(60, 255, 255)
+
+2 spell mana
+Mouse clicked at position: 1211, 481
+RGB value: -13107201
+(55, 255, 255)
+
+3 spell mana
+Mouse clicked at position: 1226, 475
+RGB value: -12845057
+(59, 255, 255)
+
+
+
