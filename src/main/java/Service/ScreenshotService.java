@@ -53,6 +53,23 @@ public class ScreenshotService {
         System.out.println(formatter.format(now.getTime())+"_screenshot.png"+" created.");
     }
 
+    public void makeIdentifyScreenshots() throws Exception {
+        Rectangle rect = new Rectangle(559, 127, 290, 267);
+        Calendar now = Calendar.getInstance();
+        //BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+        BufferedImage screenShot = robot.createScreenCapture(rect);
+        ImageIO.write(screenShot, "png", new File("C:\\screenshot\\"+formatter.format(now.getTime())+"_screenshot.png"));
+        System.out.println(formatter.format(now.getTime())+"_screenshot.png"+" created.");
+    }
+
+    public BufferedImage makeIdentifyScreenshotsReturnBufferedImage() throws Exception {
+        Rectangle rect = new Rectangle(559, 127, 290, 267);
+        Calendar now = Calendar.getInstance();
+        //BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+        BufferedImage screenShot = robot.createScreenCapture(rect);
+        return screenShot;
+    }
+
     public BufferedImage makeScreenshotReturnBufferedImage(int x, int y, int width, int height) throws Exception {
         Rectangle rect = new Rectangle(x, y, width, height);
         Calendar now = Calendar.getInstance();

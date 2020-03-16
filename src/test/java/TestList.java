@@ -20,7 +20,7 @@ import java.util.Queue;
 import java.util.stream.Stream;
 import javax.imageio.ImageIO;
 
-import Service.MouseService;
+import Service.*;
 import org.jnativehook.NativeHookException;
 import org.json.JSONArray;
 import org.testng.Assert;
@@ -28,13 +28,10 @@ import org.testng.annotations.Test;
 
 import Cards.Card;
 import KeyboardService.ReadFromFileService;
-import Service.CropImageService;
-import Service.MouseListenerService;
 import PageObjects.BattlingPage;
 import PageObjects.MainMenuPage;
 import PageObjects.SelectYourDeckPage;
 import PageObjects.StartingHandPage;
-import Service.ScreenshotService;
 import net.sourceforge.tess4j.TesseractException;
 
 public class TestList {
@@ -362,20 +359,6 @@ public class TestList {
         return colorList;
     }
 
-    private List<Color> getUniqueColorListIdFromImage(File file) throws IOException {
-        List<Color> colorList = new ArrayList<>();
-        BufferedImage image = ImageIO.read(file);
-
-        int heightValueConst = image.getHeight()/2; //170 width , 75 height
-        int startingPosition = image.getWidth()/4;
-
-        for (int widthStartValue = startingPosition; widthStartValue < startingPosition*3; widthStartValue++){
-            Color color1 = new Color(image.getRGB(widthStartValue, heightValueConst));
-            colorList.add(color1);
-        }
-        return colorList;
-    }
-
     @Test
     public void identifyTargetImage1() throws IOException {
         boolean answer = false;
@@ -477,41 +460,19 @@ public class TestList {
         return uniqueColorList.equals(resultList);
     }
 
-    private boolean identifyCardByRow(int whichNumberOfRow, List<Color> uniqueColorList) throws IOException {
-        List<Color> colorRowFromImage = getColorRowFromImage(whichNumberOfRow); //100. row from image
-        List<Color> resultList = new ArrayList<>();
-        List<Integer> startCoordsList = new ArrayList<>();
+    /**
+     * Get the List<Color> from the given row by the rowIndex param.
+     */
+    private List<Color> getColorRowFromImage(int rowIndex) throws IOException {
+        List<Color> rowColorFromImage = new ArrayList<>();
+        File startingHand = new File("CardImages/starting hand.png");
+        BufferedImage targetImageToIdentify = ImageIO.read(startingHand);
 
-        for (int i = 0; i < colorRowFromImage.size()-uniqueColorList.size();i++){
-            if(colorRowFromImage.get(i).equals(uniqueColorList.get(0))){
-                startCoordsList.add(i);
-            }
+        for (int i = 0; i < targetImageToIdentify.getWidth();i++){
+            Color color = new Color(targetImageToIdentify.getRGB(i, rowIndex));
+            rowColorFromImage.add(color);
         }
-
-        for(int i = 0;i<startCoordsList.size();i++){
-            int startIndex = startCoordsList.get(i); //100
-            System.out.println("current index:"+i);
-            System.out.println("start index: "+startIndex);
-            for (int z = 0;z<uniqueColorList.size();z++){     //z < 50 (uniqueColorList.size())
-                if(uniqueColorList.get(z).equals(colorRowFromImage.get(startIndex+z))){
-                    resultList.add(colorRowFromImage.get(startIndex+z));
-                }else{
-                    resultList.clear();
-                    break;
-                }
-            }
-        }
-
-        System.out.println("coords:");
-        for (Integer integer : startCoordsList){
-            System.out.println(integer);
-        }
-
-        System.out.println("Result:");
-        System.out.println(uniqueColorList.toString());
-        System.out.println(resultList.toString());
-
-        return uniqueColorList.equals(resultList);
+        return rowColorFromImage;  //returns for example the List<Color> of the 100. row.
     }
 
 
@@ -561,21 +522,6 @@ public class TestList {
     /**
      * Get the List<Color> from the given row by the rowIndex param.
      */
-    private List<Color> getColorRowFromImage(int rowIndex) throws IOException {
-        List<Color> rowColorFromImage = new ArrayList<>();
-        File image = new File("CardImages/starting hand.png");
-        BufferedImage targetImageToIdentify = ImageIO.read(image);
-
-        for (int i = 0; i < targetImageToIdentify.getWidth();i++){
-            Color color = new Color(targetImageToIdentify.getRGB(i, rowIndex));
-            rowColorFromImage.add(color);
-        }
-        return rowColorFromImage;  //returns for example the List<Color> of the 100. row.
-    }
-
-    /**
-     * Get the List<Color> from the given row by the rowIndex param.
-     */
     private List<Color> getColorRowFromImage(int rowIndex, BufferedImage targetImageToIdentify) {
         List<Color> rowColorFromImage = new ArrayList<>();
         for (int i = 0; i < targetImageToIdentify.getWidth();i++){
@@ -583,50 +529,6 @@ public class TestList {
             rowColorFromImage.add(color);
         }
         return rowColorFromImage;  //returns for example the List<Color> of the 100. row.
-    }
-
-    /**
-     * Working identify image.
-     */
-    @Test
-    public void identifyByRowTest() throws IOException {
-        File chempunkMini = new File("CardImages/chempunk_mini.png");
-        File startingHand = new File("CardImages/starting hand.png");
-        BufferedImage startingHandImage = ImageIO.read(startingHand);
-        List<Color> uniqueColorList = getUniqueColorListIdFromImage(chempunkMini);
-        //250 width
-        //376 height
-        for(int i = 0;i<startingHandImage.getHeight();i++){                       //magic number should be removed!!!!
-            if(identifyCardByRow(i, uniqueColorList)){              //getColorRowFromImage() method-ban van definialva hogy melyik image-el hasonlitja ossze
-                System.out.println("got it: "+i);
-                break;
-            }
-        }
-        System.out.println("Exiting...");
-    }
-
-    @Test
-    public void cardReferenceMapTest() throws IOException {
-        Map<List<Color>, Card> referenceCards = initReferenceMap();
-
-
-        System.out.println(referenceCards.size());
-
-
-
-    }
-
-    private Map<List<Color>, Card> initReferenceMap() throws IOException {
-        Map<List<Color>, Card> referenceCards = new HashMap<>();
-        referenceCards.put(getUniqueColorListIdFromImage("teemo.png"), new Card("Teemo", 1, 1));
-        referenceCards.put(getUniqueColorListIdFromImage("CardImages/01DE001.png"), new Card("Elite", 4, 3));
-        referenceCards.put(getUniqueColorListIdFromImage("CardImages/01DE002.png"), new Card("Tianna", 8, 7));
-
-        //screenshot from one of a card in hand
-        //getUniqueColorListIdFromImage(Buffered image), ez vissza ad egy List<Color> list-et nevezzuk: inHandCardId
-        //referenceCards.get(inHandCardId) ---> vissza ad egy Card objectet: cardObj.getName() -> "Teemo"
-
-        return referenceCards;
     }
 
     @Test
@@ -639,14 +541,122 @@ public class TestList {
         }
     }
 
+
+    /**
+     * Identify screenshots for cards in hand.
+     */
     @Test
     public void screenshotCard() throws Exception {
         ScreenshotService screenshotService = new ScreenshotService();
         System.out.println("Started...");
         Thread.sleep(3000);
         while(true){
-            screenshotService.makeScreenshotVoid(559, 127, 290, 267);
+            screenshotService.makeIdentifyScreenshots();
             Thread.sleep(2000);
         }
+    }
+
+    /**
+     * Read card references from target param folder.
+     */
+    @Test
+    public void readRefCardsFromFolder() throws IOException {
+        ImageIdentifyService imageIdentifyService = new ImageIdentifyService();
+        final File folder = new File("cardReferences");
+        Map<String, BufferedImage> referenceCardNameWithBufferedImageMap = imageIdentifyService.readRefCardsFromFolder(folder);
+
+        for (String key : referenceCardNameWithBufferedImageMap.keySet()){
+            System.out.println(key);
+        }
+    }
+
+    private List<Color> getUniqueColorListIdFromImage(File file) throws IOException {
+        List<Color> colorList = new ArrayList<>();
+        BufferedImage image = ImageIO.read(file);
+
+        int heightValueConst = image.getHeight()/2; //170 width , 75 height
+        int startingPosition = (image.getWidth()/4)*2;
+
+        for (int widthStartValue = startingPosition; widthStartValue < startingPosition+20; widthStartValue++){
+            Color color1 = new Color(image.getRGB(widthStartValue, heightValueConst));
+            colorList.add(color1);
+        }
+        return colorList;
+    }
+
+    private boolean identifyCardByRow(int whichNumberOfRow, List<Color> uniqueColorList, File file) throws IOException {
+        List<Color> colorRowFromImage = getColorRowFromImage(whichNumberOfRow, file); //100. row from image
+        List<Color> resultList = new ArrayList<>();
+        List<Integer> startCoordsList = new ArrayList<>();
+
+        for (int i = 0; i < colorRowFromImage.size()-uniqueColorList.size();i++){
+            if(colorRowFromImage.get(i).equals(uniqueColorList.get(0))){
+                startCoordsList.add(i);
+            }
+        }
+
+        for(int i = 0;i<startCoordsList.size();i++){
+            int startIndex = startCoordsList.get(i); //100
+            System.out.println("current index:"+i);
+            System.out.println("start index: "+startIndex);
+            for (int z = 0;z<uniqueColorList.size();z++){     //z < 50 (uniqueColorList.size())
+                if(uniqueColorList.get(z).equals(colorRowFromImage.get(startIndex+z))){
+                    resultList.add(colorRowFromImage.get(startIndex+z));
+                }else{
+                    resultList.clear();
+                    break;
+                }
+            }
+        }
+
+        System.out.println("coords:");
+        for (Integer integer : startCoordsList){
+            System.out.println(integer);
+        }
+
+        System.out.println("Result:");
+        System.out.println(uniqueColorList.toString());
+        System.out.println(resultList.toString());
+
+        return uniqueColorList.equals(resultList);
+    }
+
+    /**
+     * Get the List<Color> from the given row by the rowIndex param.
+     */
+    private List<Color> getColorRowFromImage(int rowIndex, File image) throws IOException {
+        List<Color> rowColorFromImage = new ArrayList<>();
+        BufferedImage targetImageToIdentify = ImageIO.read(image);
+
+        for (int i = 0; i < targetImageToIdentify.getWidth();i++){
+            Color color = new Color(targetImageToIdentify.getRGB(i, rowIndex));
+            rowColorFromImage.add(color);
+        }
+        return rowColorFromImage;  //returns for example the List<Color> of the 100. row.
+    }
+
+    /**
+     * Working identify image.
+     */
+    @Test
+    public void identifyByRowTest() throws IOException, InterruptedException {
+
+        File startingHand = new File("cardReferences/Omen Hawk.png");
+        BufferedImage startingHandImage = ImageIO.read(startingHand);
+
+        File chempunkMini = new File("cardReferences/Omen Hawk.png");
+        List<Color> uniqueColorList = getUniqueColorListIdFromImage(chempunkMini);
+        System.out.println("size: "+uniqueColorList.size());
+        Thread.sleep(5000);
+
+        //250 width
+        //376 height
+        for(int i = 0;i<startingHandImage.getHeight();i++){                       //magic number should be removed!!!!
+            if(identifyCardByRow(i, uniqueColorList, startingHand)){              //getColorRowFromImage() method-ban van definialva hogy melyik image-el hasonlitja ossze
+                System.out.println("got it: "+i);
+                break;
+            }
+        }
+        System.out.println("Exiting...");
     }
 }
