@@ -1,16 +1,21 @@
 package Service;
 
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+import org.json.JSONArray;
 
 import javax.imageio.ImageIO;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 public class ImageIdentifyService {
 
